@@ -1,0 +1,398 @@
+Chapter 1 - first program
+
+Chapter 2 - Operator
+2+3 gives 5
+3-2 gives 1
+2*5 gives 10
+6/3 gives 2.0
+6//3 gives 2
+7%2 gives remainder i.e. 1
+2**3 means 2 power 3 gives 8
+
+2*5/4+5-2**3/(2+6) will follow PEMDAS 
+when multiple operations are given
+P Parenthesis
+E Exponent
+M Multiplication
+D Division
+A Addition
+S Subtraction
+
+
+
+Chapter 3 - Strings
+if you add # before any string it becomes comment which is not executable
+ string = print("hello world")
+ comment = #print("hello world")
+
+you may use single, double or tripple quotes whatever you like or require.
+
+print("what's up") 
+here double quotes required
+
+
+
+Chapter 4 - Comments
+use # or ctrl + / for commentout (string you dont want to execute)
+
+print("whats up?") #learning python
+print(2+3) #learning operators in python
+
+
+
+
+Chapter 5 - Variables
+x = 5
+print(x)
+if you write print(type(x)) then it will give <class 'int'> as 5 is an integer
+
+y = "I am learning python."
+print(y)
+if you write print(type(y)) then it will give <class 'str'> as "I am learning python." is a string.
+
+Rules to assign a variable
+1. The variable should contain letters, numbers or underscores
+2. Dont start with number i.e. 2x or 2y
+3. Spaces are not allowed i.e. space space x space y
+4. Dont use keywords used in python functions (see image Keywords)
+5. Short and Descriptive
+6. Case senstivity (lowercase letters, uppercase letters - lowercase letters should be used)
+
+fruitbasket = "mangoes"
+print(fruitbasket) gives mangoes
+
+if you write
+fruitbasket = "mangoes"
+del fruitbasket
+print(fruitbasket) gives error because you have deleted fruit basket.
+
+
+
+Chapter 6 - input variables
+fruitbasket = input("what is your favourite fruit?")
+print(fruitbasket)
+
+2nd stage input function
+name = input("what is your name?")
+print("hello" , name)
+will ask your name, you type your name and it will then give "hello Afzal"
+
+3rd stage input function
+name = input("what is your name?")
+age = input("what is your age?")
+greetings = "Hello"
+print(greetings , name , "you are still young") 
+
+
+Chapter 7 Conditional Logics (see image by same name)
+hammad_age = 4
+age_at_school_required = 5
+print(hammad_age == age_at_school_required)
+
+ input function + logical operator
+age_at_school_required = 5
+hammad_age = input("what is hammad's age? ")
+hammad_age = int(hammad_age)
+print(hammad_age==age_at_school_required)
+
+
+
+Chapter 8 - Type Conversion
+x = 8
+print(type(x)) gives <class 'int'>
+
+y = 10.2
+print(type(y)) gives <class 'float'>
+
+z = "Hello"
+print(type(z)) gives <class 'str'>
+
+when an integer is multiplied/divided by a float or a float is multiplied/divided by an integer 
+the resulting value is always a float in python.
+
+when an integer is added/subtracted to/from a float or a float is added/subtracted to/from an integer 
+the resulting value is always a float in python.
+
+implicit type conversion
+x = x+y
+print(x, "type of x is" , type(x)) gives 18.2 type of x is <class 'float'>
+similarly
+x = x*y
+print(x, "type of x is" , type(x)) gives 185.64 type of x is <class 'float'>
+
+explicit type conversion
+age = input("what is your age?")
+age = int(age)
+print(age, type(age))
+gives
+what is your age?33
+33 <class 'int'>
+
+age = input("what is your age?")
+print(age, type(int(age)))
+gives
+what is your age?34
+34 <class 'int'>
+
+
+
+Chapter 9 - if else/elif Statements
+hammad_age = input("what is hammad's age? ")
+hammad_age = int(hammad_age)
+age_required_at_school = 5
+if hammad_age==age_required_at_school:
+    print("Hammad can join school.")
+elif hammad_age>age_required_at_school:
+    print("Hammad can join higher classes.")
+else:
+    print("Hammad can not join school.")
+
+gives
+what is hammad's age? 5
+Hammad can join school.
+
+
+hammad_age = input("what is hammad's age? ")
+hammad_age = int(hammad_age)
+age_required_at_school = 5
+if hammad_age==age_required_at_school:
+    print("Hammad can join school.")
+elif hammad_age>age_required_at_school:
+    print("Hammad can join higher classes.")
+else:
+    print("Hammad can not join school.")
+
+gives
+what is hammad's age? 4
+Hammad can not join school.
+
+
+hammad_age = input("what is hammad's age? ")
+hammad_age = int(hammad_age)
+age_required_at_school = 5
+if hammad_age==age_required_at_school:
+    print("Hammad can join school.")
+elif hammad_age>age_required_at_school:
+    print("Hammad can join higher classes.")
+else:
+    print("Hammad can not join school.")
+
+gives
+what is hammad's age? 6
+Hammad can join higher classes.
+
+
+hammad_age = int(input("what is hammad's age? "))
+age_required_at_school = 5
+if hammad_age==age_required_at_school:
+    print("Hammad can join school.")
+elif hammad_age>age_required_at_school:
+    print("Hammad can join higher classes.")
+else:
+    print("Hammad can not join school.")
+
+gives
+what is hammad's age? 5
+Hammad can join school.
+
+
+hammad_age = int(input("what is hammad's age? "))
+age_required_at_school = 5
+if hammad_age==age_required_at_school:
+    print("Hammad can join school.")
+elif hammad_age>age_required_at_school:
+    print("Hammad can join higher classes.")
+else:
+    print("Hammad can not join school.")
+
+gives
+what is hammad's age? 4
+Hammad can not join school.
+
+
+hammad_age = int(input("what is hammad's age? "))
+age_required_at_school = 5
+if hammad_age==age_required_at_school:
+    print("Hammad can join school.")
+elif hammad_age>age_required_at_school:
+    print("Hammad can join higher classes.")
+else:
+    print("Hammad can not join school.")
+
+gives
+what is hammad's age? 6
+Hammad can join higher classes.
+
+
+you may insert as many elif calauses as you want e.g.
+hammad_age = int(input("what is hammad's age? "))
+age_required_at_school = 5
+if hammad_age==age_required_at_school:
+    print("Hammad can join school.")
+elif hammad_age>age_required_at_school:
+    print("Hammad can join higher classes.")
+elif hammad_age<=3:
+    print("you should take care of Hammad, he is still a baby.")
+else:
+    print("Hammad can not join school.")
+
+gives
+what is hammad's age? 2
+you should take care of Hammad, he is still a baby.
+
+
+
+Chapter 10 - Functions
+3 ways of defining
+
+def print_codanics(text):
+    print(text)
+    print(text)
+    print(text)
+print_codanics("I am learning python.")
+
+def print_codanics():
+    print("I am learning python.")
+    print("I am learning python.")
+    print("I am learning python.")
+print_codanics()
+
+def print_codanics():
+    text = "I am learning python."
+    print(text)
+    print(text)
+    print(text)
+print_codanics()
+
+All the 3 ways give
+I am learning python.
+I am learning python.
+I am learning python.
+
+
+name = input("whats your child name? ")
+age = input("whats your child age? ")
+age = int(age)
+def school_calculator(name,age):
+    if age==5:
+        print(name ,  "can join the school.")
+    elif age>5:
+        print(name , "can join higher school.")
+    else:
+        print(name , "is still a baby.")
+school_calculator(name, age)
+
+gives
+whats your child name? fawad
+whats your child age? 6
+fawad can join higher school.
+
+
+age = input("whats your age now? ")
+age = int(age)
+def age_after_20_years(age):
+    new_age = age + 20
+    print("your age after 20 years will be" , new_age)
+age_after_20_years(age)
+
+gives
+whats your age now? 34
+your age after 20 years will be 54
+
+
+
+Chapter 11 - Loops
+two kinds of loops 1: while loops , 2: for loops
+
+#1: while loops
+x = 0
+while (x <= 5):
+    print(x)
+    x = x+1
+gives
+0
+1
+2
+3
+4
+5
+
+#2: for loops
+for x in range(4,11):
+    print(x)
+gives
+4
+5
+6
+7
+8
+9
+10
+
+#array
+days = ["Mon" , "Tue" , "Wed" , "Thu" , "Fri" , "Sat" , "Sun"]
+for d in days:
+    print(d)
+gives
+Mon
+Tue
+Wed
+Thu
+Fri
+Sat
+Sun
+
+days = ["Mon" , "Tue" , "Wed" , "Thu" , "Fri" , "Sat" , "Sun"]
+for d in days:
+    if d==fri: break #stops loop at d
+    print(d)
+gives
+Mon
+Tue
+Wed
+Thu
+
+days = ["Mon" , "Tue" , "Wed" , "Thu" , "Fri" , "Sat" , "Sun"]
+for d in days:
+    if d=="Fri": continue #skips d
+    print(d)
+gives
+Mon
+Tue
+Wed
+Thu
+Sat
+Sun
+
+
+Chapter 12 - Import Libraries
+Libraries e.g. math , statistics , numpy , pandas
+
+#if we want to print value of pi
+import math
+print("The value of pi is " , math.pi)
+gives
+The value of pi is  3.141592653589793
+
+import statistics
+x = [150,250,350,450]
+print(statistics.mean(x))
+gives
+300
+
+
+Chapter 13 - Trouble Shooting
+print(we are learning python with Ammar)
+gives Syntax error because we haven't put inverted commas at start and end of our sentence.
+
+print(25/0)
+gives runtime error(math error).
+
+name = Afzal
+print("Hello name")  #correct ("Hello" , name)
+gives symantic error (the most difficult error)
+
+
+
+Chapter 14 - Important Informaion
+
